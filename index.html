@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora Divisora de Conta</title>
+</head>
+<body>
+    <section class="bg_container">
+
+        <main class="border_container">
+            <form class="main_container" onsubmit="finalizarConta(event)">
+                <div class="head_container">
+                    <h1 class="title">Divisor de Conta</h1>
+                </div>
+
+                <div class="input_name">
+                    <label for="cliente">Nome do Cliente:</label>
+                    <input type="text" id="nomeCliente" placeholder="Nome">
+                </div>
+
+                <div class="content_container">
+                    <div>
+                        <h3>Comidas</h3>
+                        <div>
+                            <label for="pizza">Pizza</label>
+                            <input type="checkbox" name="produto" class="grupo" id="pizza" value="Pizza:42.00">
+                            <input type="number" placeholder="Digite a quantidade">
+                        </div>
+                        <div>
+                            <label for="hamburger">Hamburger</label>
+                            <input type="checkbox" name="produto" id="hamburger" value="Hamburger:29.00">
+                            <input type="number" placeholder="Digite a quantidade">
+                        </div>
+                        <div>
+                            <label for="temaki">Temaki</label>
+                            <input type="checkbox" name="produto" id="temaki" value="Temaki:20.00">
+                            <input type="number" placeholder="Digite a quantidade">
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3>Bebidas</h3>
+                        <div>
+                            <label for="suco">Suco</label>
+                            <input type="checkbox" name="produto" id="suco" value="Suco:7.00">
+                            <input type="number" placeholder="Digite a quantidade">
+                        </div>
+                        <div>
+                            <label for="refrigerante">Refrigerante</label>
+                            <input type="checkbox" name="produto" id="refrigerante" value="Refrigerante:8.00">
+                            <input type="number" placeholder="Digite a quantidade">
+                        </div>
+                        <div>
+                            <label for="agua">Água</label>
+                            <input type="checkbox" name="produto" id="agua" value="Água:5.00">
+                            <input type="number" placeholder="Digite a quantidade">
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3>Porções</h3>
+                        <div>
+                            <label for="fritas">Batata Frita</label>
+                            <input type="checkbox" name="produto" id="fritas" value="Batata Frita:19.00:grupo">
+                            <input type="number" placeholder="Digite a quantidade">
+                        </div>
+                        <div>
+                            <label for="peixe">Porção de Peixe</label>
+                            <input type="checkbox" name="produto" id="peixe" value="Porção de Peixe:50.00:grupo">
+                            <input type="number" placeholder="Digite a quantidade">
+                        </div>
+                        <div>
+                            <label for="camarao">Porção de Camarão</label>
+                            <input type="checkbox" name="produto" id="camarao" value="Porção de Camarão:95.00:grupo">
+                            <input type="number" placeholder="Digite a quantidade">
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="sub_title">Rodízios</h3>
+                        <div class="sub_title">
+                            <label for="simples">Rodízio Simples</label>
+                            <input type="checkbox" name="produto" id="simples" value="Rodízio Simples:70.00">
+                            <input type="number" placeholder="Digite a quantidade" value="1" style="display: none;">
+                        </div>
+                        <div> 
+                            <label for="executivo">Rodízio Executivo</label>
+                            <input type="checkbox" name="produto" id="executivo" value="Rodízio Executivo:85.00">
+                            <input type="number" placeholder="Digite a quantidade" value="1" style="display: none;">
+                        </div>
+                    </div>
+                </div>
+                <div class="footer_container">
+                    <button type="submit" id="adicionar" >Adicionar</button>
+                    <button id="gerarNotaFiscal" >Gerar Nota Fiscal</button>
+                    <button type="button" id="finalizar" >Finalizar Conta</button>
+                </div>
+                <div id="notaFiscal" class="nota_fiscal" style="display: none;"></div>
+
+            </form>
+            <div id="resultado" class="result_container"></div>
+            
+        </main>
+    </section>
+    <script src="./script.js"></script>
+</body>
+</html>
