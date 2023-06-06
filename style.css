@@ -161,8 +161,29 @@ li{
 }
 
 /* Responsividade */
-@media screen and (max-width: 480px) {
-.border_container {
-    width: 100%;
+@media screen and (max-width: 1000px) {
+    .border_container {
+        width: 100%;
+    }
+
+@media screen and (max-width: 500px) {
+    .content_container {
+        margin-bottom: 20px;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    button{
+        padding: 0.4em;
+        font-size: 12px;
+        margin: 0 0.4em;
+    }
+    .input_name > input {
+        width: 100%;
+    }
 }
 }
+
+
+
+
+
